@@ -51,3 +51,19 @@ for county_dict in voting_data:
 for county_dict in voting_data:
     for value in county_dict.values():
         print(value)
+
+for county_dict in voting_data:
+    print(county_dict['county'])
+
+
+counties_dict = {"Arapahoe": 369237, "Denver":413229, "Jefferson": 390222}
+for county, voters in counties_dict.items():
+    print(f"{county} county has {voters} registered voters.")
+
+
+# Using the with statement open the file as a text file.
+with open(file_to_save, "w") as txt_file:
+
+    # Write some data to the file.
+    txt_file.write("Counties in the election\n")
+    txt_file.write("Arapahoe\nDenver\nJefferson")
